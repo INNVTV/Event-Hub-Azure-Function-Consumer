@@ -2,12 +2,12 @@
 EventHubs with Azure Function
 
 ## Architecture
-![Architecture](https://github.com/INNVTV/IoT-Simulated-Device/blob/master/images/architecture.jpg)
+![Architecture](https://github.com/INNVTV/Event-Hub-Azure-Function-Consumer/blob/master/images/architecture.jpg)
 
 ## Offsetts/Checkpointing
 Azure Functions using EventHub triggers leverage the underlying storage account to store checkpoint data. Unlilke the **Azure.Messaging.EventHubs.Processor** nuget package the data is stored as a json string in the blob file for each partition (0-32). In the nuget package the SDK stores the checkpoint as metadata on the file.
 
-![Checkpoint](https://github.com/INNVTV/IoT-Simulated-Device/blob/master/images/checkpoint.jpg)
+![Checkpoint](https://github.com/INNVTV/Event-Hub-Azure-Function-Consumer/blob/master/images/checkpoint.jpg)
 
 
 ## Scaling
