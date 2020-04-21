@@ -13,7 +13,11 @@ Azure Functions using EventHub triggers leverage the underlying storage account 
 ## Scaling
 Each instance of an event triggered function is backed by a single EventProcessorHost instance. The trigger (powered by Event Hubs) ensures that only one EventProcessorHost instance can get a lease on a given partition.
 
-For example, consider an Event Hub as follows:
+
+![Checkpoint](https://github.com/INNVTV/Event-Hub-Azure-Function-Consumer/blob/master/images/scaling.jpg)
+
+
+For another example, consider an Event Hub as follows:
 
  * 10 partitions
  * 1,000 events distributed evenly across all partitions, with 100 messages in each partition
